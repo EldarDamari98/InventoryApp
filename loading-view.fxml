@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.excelnew.LoadingController">
+    <Label text="טוען מוצרים אנא המתן..." font="$x1" alignment="CENTER">
+        <font>
+            <Font name="Arial" size="24"/>
+        </font>
+        <StackPane.alignment>
+            <Insets left="10.0" right="10.0" top="10.0" bottom="10.0"/>
+        </StackPane.alignment>
+    </Label>
+</StackPane>

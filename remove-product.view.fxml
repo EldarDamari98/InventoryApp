@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.excelnew.RemoveProductController"
+      alignment="TOP_CENTER" spacing="20.0">
+
+    <Label text="עריכת מכירת מוצר"/>
+
+    <Label text="הכנס מספר סידורי של המוצר" style="-fx-alignment: center-right;"/>
+    <TextField fx:id="skuField" promptText="SKU" style="-fx-text-alignment: right; -fx-alignment: center-right; -fx-font: 16px Arial;"/>
+    <Label text="הכנס תאריך המכירה" style="-fx-alignment: center-right;"/>
+    <TextField fx:id="dateSoldField" promptText="תאריך" style="-fx-text-alignment: right; -fx-alignment: center-right; -fx-font: 16px Arial;"/>
+    <Label text="הכנס את שם הלקוח" style="-fx-alignment: center-right;"/>
+    <TextField fx:id="customerNameField" promptText="שם הלקוח" style="-fx-text-alignment: right; -fx-alignment: center-right; -fx-font: 16px Arial;"/>
+    <Label text="הכנס את סטטוס המכירה" style="-fx-alignment: center-right;"/>
+    <TextField fx:id="statusField" promptText="סטטוס המכירה" style="-fx-text-alignment: right; -fx-alignment: center-right; -fx-font: 16px Arial;"/>
+    <Label text="הכנס את מחיר המכירה" style="-fx-alignment: center-right;"/>
+    <TextField fx:id="soldPriceField" promptText="מחיר המכירה" style="-fx-text-alignment: right; -fx-alignment: center-right; -fx-font: 16px Arial;"/>
+    <Label text="הכנס את מספר החשבונית" style="-fx-alignment: center-right;"/>
+    <TextField fx:id="invoiceNumberField" promptText="מספר החשבונית" style="-fx-text-alignment: right; -fx-alignment: center-right; -fx-font: 16px Arial;"/>
+
+    <Button fx:id="confirmSaleButton" text="אשר מכירה" onAction="#removeProduct"/>
+    <Button fx:id="goBackButton" text="חזרה" onAction="#goBack"/>
+
+</VBox>

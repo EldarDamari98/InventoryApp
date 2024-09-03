@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.excelnew.ShopifyImageUploaderController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+    <Label text="הכנס את מספר התמונות שתרצה לעלות למוצר" style="-fx-alignment: center-right;"/>
+    <TextField fx:id="imageCountField" promptText="כמות תמונות" style="-fx-text-alignment: right; -fx-alignment: center-right; -fx-font: 16px Arial;"/>
+    <Button text="צור כפתורים להעלאת תמונות" onAction="#createImageButtons" style="-fx-alignment: center-right;"/>
+    <VBox fx:id="imageButtonsContainer" alignment="CENTER" spacing="10.0"/>
+    <Button text="אשר העלאת תמונות" onAction="#confirmUpload" style="-fx-alignment: center-right;"/>
+    <Button text="סגור" onAction="#closeWindow" style="-fx-alignment: center-right;"/>
+</VBox>

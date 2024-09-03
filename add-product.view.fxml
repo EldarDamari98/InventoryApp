@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<ScrollPane fitToWidth="true" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.excelnew.ProductController">
+    <VBox alignment="CENTER" spacing="20.0">
+        <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        </padding>
+
+
+        <HBox spacing="10.0" alignment="CENTER">
+            <CheckBox fx:id="uploadToExcel" text="העלאת המוצר לאקסל"/>
+            <CheckBox fx:id="uploadToShopify" text="העלאת המוצר לשופייפי"/>
+        </HBox>
+
+        <Label text="הכנס את שם המוצר" style="-fx-alignment: center-right;"/>
+        <TextField fx:id="titleField" promptText="שם המוצר" style="-fx-text-alignment: right; -fx-alignment: center-right; -fx-font: 16px Arial;"/>
+        <Label text="הכנס את המספר הסידורי" style="-fx-alignment: center-right;"/>
+        <TextField fx:id="skuField" promptText="מספר סידורי" style="-fx-text-alignment: right; -fx-alignment: center-right; -fx-font: 16px Arial;"/>
+        <Label text="הכנס את המחיר שתרצה למכור את המוצר" style="-fx-alignment: center-right;"/>
+        <TextField fx:id="priceField" promptText="מחיר" style="-fx-text-alignment: right; -fx-alignment: center-right; -fx-font: 16px Arial;"/>
+        <Label text="הכנס את המחיר עלות של המוצר" style="-fx-alignment: center-right;"/>
+        <TextField fx:id="BuyingPriceField" promptText="מחיר" style="-fx-text-alignment: right; -fx-alignment: center-right; -fx-font: 16px Arial;"/>
+        <Label text="הכנס את התיאור של המוצר" style="-fx-alignment: center-right;"/>
+        <TextArea fx:id="descriptionField" promptText="תיאור" prefRowCount="3" style="-fx-text-alignment: right; -fx-alignment: center-right; -fx-font: 16px Arial;"/>
+
+
+        <Label text="בחר קולקציות" style="-fx-alignment: center-right;"/>
+        <VBox fx:id="collectionVBox" spacing="5.0" alignment="CENTER_LEFT">
+            <CheckBox fx:id="outletCheckBox" text="OUTLET"/>
+            <CheckBox fx:id="newArrivalCheckBox" text="OUTLET ARRIVED"/>
+            <CheckBox fx:id="ringsCheckBox" text="OUTLET RINGS"/>
+            <CheckBox fx:id="braceletsCheckBox" text="OUTLET BRACELETS"/>
+            <CheckBox fx:id="necklacesCheckBox" text="OUTLET NECKLACES"/>
+            <CheckBox fx:id="earringsCheckBox" text="OUTLET EARRINGS"/>
+        </VBox>
+
+        <Label text="הכנס את הכמות של המוצר" style="-fx-alignment: center-right;"/>
+        <TextField fx:id="quantityField" promptText="כמות" style="-fx-text-alignment: right; -fx-alignment: center-right; -fx-font: 16px Arial;"/>
+        <Label fx:id="goldKaratLabel" text="איכות הזהב" style="-fx-alignment: center-right;" visible="false"/>
+        <TextField fx:id="goldKaratField" promptText="איכות הזהב" style="-fx-text-alignment: right; -fx-alignment: center-right;" visible="false"/>
+        <Label fx:id="weightLabel" text="משקל הפריט בגרם" style="-fx-alignment: center-right;" visible="false"/>
+        <TextField fx:id="weightField" promptText="משקל הפריט בגרם" style="-fx-text-alignment: right; -fx-alignment: center-right;" visible="false"/>
+
+        <Label fx:id="centerStoneLabel" text="משקל האבן המרכזית" style="-fx-alignment: center-right;" visible="false"/>
+        <TextField fx:id="centerStoneField" promptText="משקל האבן המרכזית" style="-fx-text-alignment: right; -fx-alignment: center-right;" visible="false"/>
+
+        <Label fx:id="sideStonesLabel" text="משקל האבנים בצדדים" style="-fx-alignment: center-right;" visible="false"/>
+        <TextField fx:id="sideStonesField" promptText="משקל האבנים בצדדים" style="-fx-text-alignment: right; -fx-alignment: center-right;" visible="false"/>
+
+        <HBox spacing="10.0" alignment="CENTER">
+            <Button text="לחץ כאן להוסיף את המוצר" onAction="#addProduct" style="-fx-alignment: center-right;"/>
+            <Button fx:id="backButton" text="חזרה" onAction="#goBack" style="-fx-alignment: center-right;"/>
+        </HBox>
+    </VBox>
+</ScrollPane>

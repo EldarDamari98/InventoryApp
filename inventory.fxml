@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.CheckBox?>
+
+<VBox alignment="TOP_CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.excelnew.InventoryController">
+
+    <Label fx:id="loadingLabel" text="טוען מוצרים אנא המתן..." alignment="CENTER" visible="false">
+    </Label>
+
+    <HBox spacing="10" fx:id="filterBox">
+        <CheckBox fx:id="inStockCheckBox" text="רק מוצרים במלאי" onAction="#filterProductsInStock"/>
+        <CheckBox fx:id="soldOutCheckBox" text="רק מוצרים שנמכרו" onAction="#filterProductsInStock"/>
+    </HBox>
+
+
+    <HBox spacing="10" fx:id="searchBox" visible="true">
+        <TextField fx:id="searchField" promptText="Enter SKU to search" onKeyReleased="#filterProducts" maxWidth="300"/>
+        <Label text="חיפוש מוצר לפי SKU" />
+    </HBox>
+
+
+    <ScrollPane fx:id="productContainer" VBox.vgrow="ALWAYS" visible="true">
+    </ScrollPane>
+
+    <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-background-color: #ffffff; -fx-padding: 10px;" fx:id="buttonBox" visible="true">
+        <Button fx:id="downloadImagesButton" text="טעינת תמונות" onAction="#downloadImages"/>
+        <Button text="הוספת מוצר" onAction="#openAddProduct"/>
+        <Button text="חזור" onAction="#goBack"/>
+    </HBox>
+</VBox>
